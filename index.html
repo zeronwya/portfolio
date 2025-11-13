@@ -233,12 +233,12 @@
     </nav>
   </header>
   <section id="home" class="hero">
-    <h1>Hey, I'm ZERON</h1>
-    <p>Welcome to my portfolio — a space where design meets creativity and clean code. Scroll to see my work.</p>
+    <h1>Hey, I'm Zeron</h1>
+    <p>Welcome to my portfolio. a space where design meets creativity and clean code obviously. scroll to learn more about me.</p>
   </section>
   <section id="about" class="about">
     <h2 style="color:white;">About Me</h2>
-    <p>I'm Zeron, a passionate developer and creator. I love making cool websites, coding, and exploring new technologies.</p>
+    <p>Im Zeron, a full stack and backend developer but im more focused on backend. I like to make websites and games, it's basically my hobby. I'm always up to learn more stuff. I prefer not to share any personal details, but my name is Rafi, my ethnicity is Bengali. if you like any of my work or want something done, you can contact me below on instagram or my email. </p>
   </section>
   <section id="languages" class="languages">
     <h2 style="color:white;">Languages I Know</h2>
@@ -294,7 +294,7 @@
   <audio id="bgMusic4" src="nopeyourtoolate.mp3" preload="auto"></audio>
   <audio id="bgMusic5" src="misstherage.mp3" preload="auto"></audio>
   <audio id="bgMusic6" src="notallowed.mp3" preload="auto"></audio>
-  <audio id="bgMusic7" src="nuts.mp6" preload="auto"></audio>
+  <audio id="bgMusic7" src="nuts.mp3" preload="auto"></audio>
   <audio id="bgMusic8" src="doyoulike.mp3" preload="auto"></audio>
   <audio id="bgMusic9" src="Ismokedawaymybrain.mp3" preload="auto"></audio>
   <script>
@@ -522,7 +522,7 @@
     }, { threshold: 0.2 });
     document.querySelectorAll('.projects, .about, .languages').forEach(el => observer.observe(el));
 
-    // Language bars animation
+    // Language bars animation might not work on phones tho
     const langBars = document.querySelectorAll('.lang-bar-fill');
     const langObserver = new IntersectionObserver(entries => {
       entries.forEach(entry => {
@@ -541,7 +541,7 @@
     }, { threshold: 0.5 });
     langBars.forEach(bar => langObserver.observe(bar));
 
-    // Tab title ping-pong animation
+    // Tab title ping-pong animation ts imp
     const fullTitle = "zeron";
     let tabIdx = 0;
     let forward = true;
@@ -555,6 +555,18 @@
         if (tabIdx === 0) forward = true;
       }
     }, 600);
+ // basically mobile = no cursor and no particles falling from cursor (that doesnt exist lmao)   
+if (!isMobile) {
+        idleParticleShit();
+    }
+
+    // i think this works
+    setInterval(() => {
+        setTimeout(() => {
+            createParticle(Math.random() * window.innerWidth, Math.random() * window.innerHeight * 0.3);
+        }, Math.random() * 1000 + 100);
+    }, isMobile ? 300 : 1000);
+
   </script>
 </body>
 </html>
