@@ -140,6 +140,8 @@
     .lang-bar .lang-bar-fill.cpp { background: limegreen !important; }
     .lang-bar .lang-bar-fill.html { background: #7CFC00 !important; }
     .lang-bar .lang-bar-fill.nodejs { background: gold !important; }
+    .lang-bar .lang-bar-fill.javascript { background: gold !important; }
+    .lang-bar .lang-bar-fill.go { background: #00CED1 !important; } /* Teal for Go */
     /* Music Player */
     .music-player {
       position: fixed;
@@ -231,12 +233,12 @@
     </nav>
   </header>
   <section id="home" class="hero">
-    <h1>Hey, I'm Zeron</h1>
-    <p>Welcome to my portfolio, a space where design meets creativity and clean code obviously.</p>
+    <h1>Hey, I'm ZERON</h1>
+    <p>Welcome to my portfolio — a space where design meets creativity and clean code. Scroll to see my work.</p>
   </section>
   <section id="about" class="about">
     <h2 style="color:white;">About Me</h2>
-    <p>I'm Zeron, and i'm 13 my ethnicity is bengali, i was born in bangladesh. I won't share my government-given name for security purposes. i like making websites and games, its pretty much my hobby or maybe something else is im not sure. i make sure everything i create is safe for the community. I prefer not to talk about any personal matters. you can find my contact info below for anyone who's interested.
+    <p>I'm Zeron, a passionate developer and creator. I love making cool websites, coding, and exploring new technologies.</p>
   </section>
   <section id="languages" class="languages">
     <h2 style="color:white;">Languages I Know</h2>
@@ -256,10 +258,18 @@
       <img class="lang-logo" src="https://raw.githubusercontent.com/github/explore/main/topics/nodejs/nodejs.png" alt="Node.js">
       <div class="lang-bar"><div class="lang-bar-fill nodejs"></div></div>
     </div>
+    <div class="lang-container">
+      <img class="lang-logo" src="https://raw.githubusercontent.com/github/explore/main/topics/javascript/javascript.png" alt="JavaScript">
+      <div class="lang-bar"><div class="lang-bar-fill javascript"></div></div>
+    </div>
+    <div class="lang-container">
+      <img class="lang-logo" src="https://upload.wikimedia.org/wikipedia/commons/0/05/Go_Logo_Blue.svg" alt="Go">
+      <div class="lang-bar"><div class="lang-bar-fill go"></div></div>
+    </div>
   </section>
   <section id="projects" class="projects">
     <h2 style="color:white;">Projects</h2>
-    <p>My coolest works will show up here, i dont have any for now.</p>
+    <p>My coolest works will show up here.</p>
   </section>
   <footer id="contact">
     <div class="socials">
@@ -284,7 +294,7 @@
   <audio id="bgMusic4" src="nopeyourtoolate.mp3" preload="auto"></audio>
   <audio id="bgMusic5" src="misstherage.mp3" preload="auto"></audio>
   <audio id="bgMusic6" src="notallowed.mp3" preload="auto"></audio>
-  <audio id="bgMusic7" src="nuts.mp3" preload="auto"></audio>
+  <audio id="bgMusic7" src="nuts.mp6" preload="auto"></audio>
   <audio id="bgMusic8" src="doyoulike.mp3" preload="auto"></audio>
   <audio id="bgMusic9" src="Ismokedawaymybrain.mp3" preload="auto"></audio>
   <script>
@@ -522,6 +532,8 @@
           if (bar.classList.contains('cpp')) bar.style.width = '50%';
           if (bar.classList.contains('html')) bar.style.width = '100%';
           if (bar.classList.contains('nodejs')) bar.style.width = '60%';
+          if (bar.classList.contains('javascript')) bar.style.width = '78%';
+          if (bar.classList.contains('go')) bar.style.width = '67%';
           const logo = bar.parentElement.previousElementSibling;
           logo.classList.add('glow');
         }
