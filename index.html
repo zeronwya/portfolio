@@ -63,6 +63,17 @@
     footer{padding:40px 20px;text-align:center;background:rgba(255,255,255,0.03);backdrop-filter:blur(8px);}
     .socials a{margin:0 10px;display:inline-flex;align-items:center;gap:8px;color:var(--muted);transition:0.3s;}
     .socials a:hover{color:var(--accent3);}
+/* Disable cursor on mobile */
+.no-cursor .cursor {
+  display: none !important;
+}
+.no-cursor {
+  cursor: auto !important;
+}
+.no-cursor a,
+.no-cursor button {
+  cursor: auto !important;
+}
     /* Cursor */
     .cursor{
       position:fixed;
@@ -555,18 +566,10 @@
         if (tabIdx === 0) forward = true;
       }
     }, 600);
- // basically mobile = no cursor and no particles falling from cursor (that doesnt exist lmao)   
-if (!isMobile) {
-        idleParticleShit();
-    }
-
-    // i think this works
-    setInterval(() => {
-        setTimeout(() => {
-            createParticle(Math.random() * window.innerWidth, Math.random() * window.innerHeight * 0.3);
-        }, Math.random() * 1000 + 100);
-    }, isMobile ? 300 : 1000);
-
+    // Detect mobile and disable custom cursor + stars
+if ("ontouchstart" in window || navigator.maxTouchPoints > 0) {
+    document.body.classList.add("no-cursor");
+}
   </script>
 </body>
 </html>
